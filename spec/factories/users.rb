@@ -17,5 +17,10 @@ FactoryGirl.define do
         Enrollment.create(course: course, user: instance)
       end
     end
+
+    trait :with_auth_credentials do
+      provider "github"
+      uid "1234"
+    end
   end
 end
